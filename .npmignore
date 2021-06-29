@@ -1,0 +1,7 @@
+# Jest output and cache files
+/tmp/jest_rs
+/.parcel-cache/
+/.idea
+/src
+/tests
+*.map
