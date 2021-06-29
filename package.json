@@ -1,0 +1,56 @@
+{
+  "author": "Daan Leenders (https://github.com/daanleenders)",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/daanleenders/stylelint-formatter-github-checks/issues"
+  },
+  "directories": {
+    "lib": "./dist"
+  },
+  "description": "An Styelint formatter to use with [Github Checks](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-status-checks#checks). It outputs a json format that is needed for the ['Update a check run'](https://docs.github.com/en/rest/reference/checks#update-a-check-run) API call, so you can send the eslint output to github.",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "parcel": "^2.0.0-beta.3.1",
+    "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": "^14"
+  },
+  "jest": {
+    "cacheDirectory": "/tmp/jest_rs",
+    "clearMocks": true,
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-formatter",
+    "stylelintformatter",
+    "github",
+    "github-checks",
+    "github-checks-api"
+  ],
+  "license": "MIT",
+  "main": "dist/githubChecksFormatter.js",
+  "name": "stylelint-formatter-github-checks",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daanleenders/stylelint-formatter-github-checks.git"
+  },
+  "scripts": {
+    "start": "echo \"Error: should only be run as part of Stylelint\" && exit 1",
+    "test": "jest",
+    "build": "parcel build src/githubChecksFormatter.js --no-content-hash --no-optimize --no-scope-hoist",
+    "prepublishOnly": "npm run build"
+  },
+  "version": "1.0.0"
+}
